@@ -1,0 +1,148 @@
+
+:host {
+  display: block;
+  min-height: 100vh;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  background: linear-gradient(
+    135deg,
+    #f9eaff,
+    #ffe6f3,
+    #fff2bc
+  );
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.tracker {
+  max-width: 480px;
+  margin: auto;
+  padding: 32px;
+  background: white;
+  border: 3px solid #271448;
+  border-radius: 28px;
+  box-shadow: 9px 9px 0 #271448;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #271448;
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 28px 0 12px;
+}
+
+.subtitle {
+  color: #6c5b83;
+  margin-bottom: 28px;
+}
+
+.progress-card {
+  background: #f5e9ff;
+  border-radius: 20px;
+  padding: 22px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #271448;
+  font-weight: bold;
+}
+
+.progress-header strong {
+  font-size: 32px;
+  color: #8a36ed;
+}
+
+.progress-track {
+  height: 18px;
+  background: #e0c8f5;
+  border-radius: 30px;
+  overflow: hidden;
+  margin: 18px 0 12px;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 30px;
+  background: linear-gradient(
+    90deg,
+    #fa48a2,
+    #8c39ef
+  );
+  transition: width 0.4s ease;
+}
+
+.progress-card p {
+  color: #6c5b83;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.motivation {
+  background: #fff0b4;
+  color: #271448;
+  text-align: center;
+  padding: 20px;
+  border-radius: 16px;
+  margin: 24px 0;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+button {
+  padding: 16px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-btn {
+  background: #f343a3;
+  color: white;
+  border: 2px solid #271448;
+  box-shadow: 4px 4px 0 #271448;
+}
+
+.add-btn:hover:not(:disabled) {
+  background: #d82b8b;
+  transform: translateY(-3px);
+}
+
+.add-btn:disabled {
+  background: #b5a9c3;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.reset-btn {
+  background: white;
+  color: #271448;
+  border: 2px solid #271448;
+}
+
+.reset-btn:hover {
+  background: #ffe04a;
+}
+
+@media (max-width: 480px) {
+  :host {
+    padding: 30px 12px;
+  }
+
+  .tracker {
+    padding: 22px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+}

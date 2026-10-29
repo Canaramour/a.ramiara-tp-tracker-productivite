@@ -1,0 +1,43 @@
+
+<div class="tracker">
+
+  <h1>Tracker de productivité</h1>
+
+  <div class="progress-card">
+    <div class="progress-header">
+      <span>Progression</span>
+      <strong>{{ progressPercentage() }}%</strong>
+    </div>
+
+    <div class="progress-track">
+      <div
+        class="progress-fill"
+        [style.width.%]="progressPercentage()">
+      </div>
+    </div>
+
+    <p>
+      {{ completedTasks() }} sur {{ DAILY_GOAL }}
+      missions accomplies
+    </p>
+  </div>
+
+  <div class="motivation">
+    {{ message() }}
+  </div>
+
+  <div class="actions">
+    <button
+      class="add-btn"
+      (click)="addTask()"
+      [disabled]="completedTasks() >= DAILY_GOAL">
+      + 1 Tâche complétée
+    </button>
+
+    <button
+      class="reset-btn"
+      (click)="resetTasks()">
+      Réinitialiser
+    </button>
+  </div>
+</div>
